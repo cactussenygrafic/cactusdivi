@@ -120,3 +120,5 @@ input[type=number] {
 .tipography_holder{padding:1em; border:1px dashed #ccc; margin-bottom: 1em; border-radius: var(--radius); background: #fafafa}
 .tipography_holder input, .tipography_holder select{max-height: 30px; border-color:#000; background-color: #fff}
 .font_uploads .row .col-md-9{max-height: 40px;}
+
+.filter{padding:5px 15px; border-radius:50px; background:#fff; cursor:pointer}
