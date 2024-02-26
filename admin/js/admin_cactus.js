@@ -130,6 +130,29 @@ jQuery(document).ready(function($){
   jQuery(document).on('click', '.bg-absolute-black', function(){
     $(document).find('#documentation_modal').remove();
   });
+
+    $('.filter').click(function() {
+      if($(this).hasClass('active'){
+        $('.filter').removeClass('active'); $('.documentation_holder').show()
+      }else{
+        $('.filter').removeClass('active');
+        $(this).addClass('active');
+        
+        // Obtiene el valor del data-filter del elemento clicado
+        var filterValue = $(this).attr('data-filter');
+
+        // Oculta todos los elementos
+        $('.documentation_holder').hide();
+
+        // Muestra solo los elementos que contienen el valor de filtro
+        $('.documentation_holder').filter(function() {
+            // Divide los valores de data-filter en un array y verifica si incluye el valor de filtro
+            return $(this).data('filter').split(' ').includes(filterValue);
+        }).show();
+      } 
+    });
+
+
   
 
 }) //FIN document.ready()
