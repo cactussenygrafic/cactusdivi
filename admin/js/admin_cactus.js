@@ -147,8 +147,8 @@ jQuery(document).ready(function($){
         // Muestra solo los elementos que contienen el valor de filtro
         $('.documentation_holder').filter(function() {
             // Divide los valores de data-filter en un array y verifica si incluye el valor de filtro
-            var dataFilter = $(this).attr('data-filter');
-            return dataFilter.split(' ').includes(filterValue);
+            var data_filter = $(this).attr('data-filter');
+            return data_filter.split(' ').includes(filterValue);
         }).show();
       } 
     });
