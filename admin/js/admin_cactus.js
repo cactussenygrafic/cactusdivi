@@ -157,8 +157,8 @@ jQuery(document).ready(function($){
         var searchValue = $(this).val().toLowerCase();
           console.log(searchValue);
         $('.documentation_holder').filter(function() {
-            var attachmentText = $(this).data('attachment').toString().toLowerCase();
-            var contentText = $(this).data('content').toString().toLowerCase();
+            var attachmentText = $(this).attr('data-attachment').toString().toLowerCase();
+            var contentText = $(this).attr('data-content').toString().toLowerCase();
 
           console.log(attachmentText);
           console.log(contentText);
