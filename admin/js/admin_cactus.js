@@ -155,7 +155,7 @@ jQuery(document).ready(function($){
 
     $('#search_documentation').on('keyup', function() {
         var searchValue = $(this).val().toLowerCase();
-  console.log(searchValue);
+          console.log(searchValue);
         $('.documentation_holder').filter(function() {
             var attachmentText = $(this).data('attachment').toString().toLowerCase();
             var contentText = $(this).data('content').toString().toLowerCase();
