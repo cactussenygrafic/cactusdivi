@@ -155,10 +155,13 @@ jQuery(document).ready(function($){
 
     $('#search_documentation').on('keyup', function() {
         var searchValue = $(this).val().toLowerCase();
-
+  console.log(searchValue);
         $('.documentation_holder').filter(function() {
             var attachmentText = $(this).data('attachment').toString().toLowerCase();
             var contentText = $(this).data('content').toString().toLowerCase();
+
+          console.log(attachmentText);
+          console.log(contentText);
             $(this).toggle(attachmentText.indexOf(searchValue) > -1 || contentText.indexOf(searchValue) > -1);
         });
     });
