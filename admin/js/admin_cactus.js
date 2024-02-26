@@ -132,7 +132,7 @@ jQuery(document).ready(function($){
   });
 
     $('.filter').click(function() {
-      if($(this).hasClass('active'){
+      if($(this).hasClass('active')){
         $('.filter').removeClass('active'); $('.documentation_holder').show()
       }else{
         $('.filter').removeClass('active');
