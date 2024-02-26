@@ -153,6 +153,18 @@ jQuery(document).ready(function($){
       } 
     });
 
+    $('#search_documentation').on('keyup', function() {
+        var searchValue = $(this).val().toLowerCase();
+
+        $('.documentation_holder').filter(function() {
+            var attachmentText = $(this).data('attachment').toString().toLowerCase();
+            var contentText = $(this).data('content').toString().toLowerCase();
+            $(this).toggle(attachmentText.indexOf(searchValue) > -1 || contentText.indexOf(searchValue) > -1);
+        });
+    });
+
+
+
 
   
 
