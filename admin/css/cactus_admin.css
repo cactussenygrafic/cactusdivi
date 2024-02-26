@@ -122,3 +122,4 @@ input[type=number] {
 .font_uploads .row .col-md-9{max-height: 40px;}
 
 .filter{padding:5px 15px; border-radius:50px; background:#fff; cursor:pointer}
+.filter.active{background:var(--primary);}
