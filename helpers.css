@@ -193,7 +193,7 @@ li[class^='et_fb_dp_dmb_module_']:before, li[class*=' et_fb_dp_dmb_module_']:bef
   #menu .et_pb_image_0_tb_header{width: 45%}
 
   #menu .et_pb_row .et_pb_column.et_pb_column_1_4{margin-bottom: 0px !important}
-  #mobile_menu1{width: 100vw;right:-10vw;left: unset; border-top:0px !important;padding: 0;margin-top: 15px;box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;}
+  #mobile_menu1{width: 100vw;right: -5vw;left: -5vw;border-top:0px !important;padding: 0;margin-top: 15px;box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;}
   .image-mega-menu img, .image-mega-menu a br{display: none;}
   .et_mobile_menu .menu-item-has-children>a {background-color: rgba(0,0,0,0);}
   #main-header .et_mobile_menu li ul, .et_pb_fullwidth_menu .et_mobile_menu li ul, .et_pb_menu .et_mobile_menu li ul{padding-left: 0px !important}
