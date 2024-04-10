@@ -65,6 +65,22 @@ jQuery(document).ready(function($){
       
   });
 
+  // Projects Masonry
+    if ($("#cactus-projects-masonry").length) {
+        // El elemento con ID #cactus-projects-masonry existe
+        var $grid = $('#cactus-projects-masonry').masonry({
+            itemSelector: '.masonry-item',
+            columnWidth: '.masonry-item',
+            percentPosition: true,
+            gutter: 10
+        });
+
+        $grid.imagesLoaded().progress(function() {
+            $grid.masonry('layout');
+        });
+    }
+
+
 
 
 }) //FIN document.ready()
