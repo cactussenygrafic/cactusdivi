@@ -68,16 +68,46 @@ jQuery(document).ready(function($){
   // Projects Masonry
     if ($("#cactus-projects-masonry").length) {
         // El elemento con ID #cactus-projects-masonry existe
-        var $grid = $('#cactus-projects-masonry').masonry({
-            itemSelector: '.masonry-item',
-            columnWidth: '.masonry-item',
-            percentPosition: true,
-            gutter: 10
-        });
+        var $masonryContainer = $('#cactus-projects-masonry'); // Cambia esto por el ID de tu contenedor
 
-        $grid.imagesLoaded().progress(function() {
-            $grid.masonry('layout');
-        });
+        function updateMasonry() {
+            var containerWidth = $masonryContainer.innerWidth();
+            var columns = inval($masonryContainer.data('columns')); // Predeterminado a 4 columnas
+            var gutter = inval($masonryContainer.data('gutter'));
+            var minColumnWidth = inval($masonryContainer.data('minwith')); // Mínimo ancho de columna
+    
+            // Calcula el número de columnas dinámicamente y ajusta para responsividad
+            columns = Math.floor(containerWidth / (minColumnWidth + gutter));
+    
+            var columnWidth = Math.floor((containerWidth - (columns - 1) * gutter) / columns);
+    
+            // Ajusta el ancho de los elementos .masonry-item
+            $masonryContainer.find('.masonry-item').each(function() {
+                $(this).css('width', columnWidth + 'px');
+            });
+    
+            // Inicializa o actualiza Masonry
+            $masonryContainer.masonry({
+                itemSelector: '.masonry-item',
+                columnWidth: columnWidth,
+                gutter: gutter
+            });
+        }
+    
+        // Llama a updateMasonry en la carga y en el evento de redimensionamiento
+        updateMasonry();
+        $(window).resize(updateMasonry);
+
+      // Aplicación animación
+      $(window).on('scroll', function() {
+          $('.masonry-item').each(function() {
+            if (isElementInView(this)) {
+              $(this).addClass('fadeInUp');
+            }
+          });
+      });
+      $(window).scroll();
+      
     }
 
 
@@ -189,4 +219,14 @@ function number_format (number, decimals=2, dec_point=',', thousands_sep='.') {
         x1 = x1.replace(rgx, '$1' + thousands_sep + '$2');
 
     return x1 + x2;
+}
+
+function isElementInView(element) {
+  var elementTop = $(element).offset().top;
+  var elementBottom = elementTop + $(element).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
 }
