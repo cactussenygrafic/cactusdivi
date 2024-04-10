@@ -72,9 +72,9 @@ jQuery(document).ready(function($){
 
         function updateMasonry() {
             var containerWidth = $masonryContainer.innerWidth();
-            var columns = inval($masonryContainer.data('columns')); // Predeterminado a 4 columnas
-            var gutter = inval($masonryContainer.data('gutter'));
-            var minColumnWidth = inval($masonryContainer.data('minwith')); // Mínimo ancho de columna
+            var columns = parseInt($masonryContainer.data('columns')); // Predeterminado a 4 columnas
+            var gutter = parseInt($masonryContainer.data('gutter'));
+            var minColumnWidth = parseInt($masonryContainer.data('minwith')); // Mínimo ancho de columna
     
             // Calcula el número de columnas dinámicamente y ajusta para responsividad
             columns = Math.floor(containerWidth / (minColumnWidth + gutter));
