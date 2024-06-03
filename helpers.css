@@ -235,6 +235,7 @@ li[class^='et_fb_dp_dmb_module_']:before, li[class*=' et_fb_dp_dmb_module_']:bef
   .row-flex-row-res{display:flex; flex-direction:row;}
   .row-2columnas-res, .row-3columnas-res{display:flex; flex-direction:row; flex-wrap: wrap;}
   .row-2columnas-res .et_pb_column{flex: 0 0 50%; width: 50% !important;padding-left: 10px !important;padding-right: 10px !important; }
+  .row-2columnas-res .et_pb_column:first-child{margin-bottom:0px}
   .row-2columnas-res .et_pb_column:nth-child(odd){padding-left: 0px !important}
   .row-2columnas-res .et_pb_column:nth-child(even){padding-right: 0px !important}
   .row-3columnas-res .et_pb_column{flex: 0 0 33%; width: 33% !important;padding-left: 10px !important;padding-right: 10px !important;}
