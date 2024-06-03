@@ -243,4 +243,5 @@ li[class^='et_fb_dp_dmb_module_']:before, li[class*=' et_fb_dp_dmb_module_']:bef
   .row-3columnas-res .et_pb_column:nth-child(3n){padding-right: 0px !important}
 
   .flex-wrap-res{flex-wrap: wrap;}
+  .flex-start-res{justify-content: flex-start;}
 }
