@@ -167,6 +167,18 @@ jQuery(document).ready(function($){
     });
 
 
+  $('input[type="checkbox"][data-name]').change(function() {
+    console.log("change");
+      var checkbox = $(this);
+      var dataName = checkbox.data('name');
+      var hiddenInput = $('input[name="' + dataName + '"][type="hidden"]');
+      if (checkbox.is(':checked')) {
+          hiddenInput.val('1');
+      } else {
+          hiddenInput.val('0');
+      }
+  });
+
 
 
   
