@@ -188,6 +188,10 @@ li[class^='et_fb_dp_dmb_module_']:hover, li[class*=' et_fb_dp_dmb_module_']:hove
 li[class^='et_fb_dp_dmb_module_']:before, li[class*=' et_fb_dp_dmb_module_']:before{content:" " !important;background-image: url(../admin/assets/icons/module_icon.png) !important; background-size: auto 100% !important; background-position: center !important;    min-height: 17px;
     background-repeat: no-repeat;}
 
+
+:root :where(a:where(:not(.wp-block-navigation))),:root :where(a:where(:not(.wp-element-button))) {text-decoration: initial !important;} /** fix 6.6 underline links **/
+
+
 @media (max-width: 950px){
   #menu .et_pb_row{display: flex; align-items: center; justify-content: center;}
   #menu .et_pb_image_0_tb_header{width: 45%}
